@@ -42,7 +42,7 @@ u¿ytkownika.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure --with-ssl
