@@ -1,0 +1,12 @@
+diff -urN siege-2.53.org/doc/Makefile.am siege-2.53/doc/Makefile.am
+--- siege-2.53.org/doc/Makefile.am	Mon Mar 18 22:19:00 2002
++++ siege-2.53/doc/Makefile.am	Sun May  5 10:40:30 2002
+@@ -63,7 +63,7 @@
+ 	  fi; \
+ 	else \
+ 	  $(mkinstalldirs) $(sysconfdir); \
+-	  $(INSTALL_DATA) $(srcdir)/urls.txt $(URLSTXT); \
++	  $(INSTALL_DATA) $(srcdir)/urls.txt $(DESTDIR)$(URLSTXT); \
+ 	fi 
+ 
+ 
