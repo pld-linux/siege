@@ -24,6 +24,17 @@ protocols, GET and POST directives, cookies, transaction logging, and
 basic authentication. Its features are configurable on a per user
 basis.
 
+%description -l pl
+Siege to narzêdzie do testowania dzia³ania i wydajno¶ci serwerów HTTP.
+Mo¿e testowaæ odporno¶æ dla pojedynczego URL-a ze zdefiniowan± liczb±
+symulowanych u¿ytkowników, lub ¶ci±gaæ wiele URL-i do pamiêci,
+obci±¿aj±c je równocze¶nie. Program raportuje ca³kowit± liczbê
+¶ci±gniêtych dokumentów, liczbê przes³anych bajtów, czas reakcji,
+liczbê jednoczesnych po³±czeñ i status operacji. Siege obs³uguje
+protoko³y HTTP/1.0 i 1.1, metody GET i POST, cookie, logowanie
+transakcji oraz zwyk³± autentykacjê. Opcje s± konfigurowalne dla
+u¿ytkownika.
+
 %prep
 %setup -q
 %patch0 -p1
