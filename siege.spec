@@ -11,7 +11,7 @@ Patch1:		%{name}-am_fixes.patch
 URL:		http://www.joedog.org/siege/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
