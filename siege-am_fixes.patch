@@ -1,0 +1,18 @@
+--- siege-2.53/src/Makefile.am~	Sun May  5 13:13:42 2002
++++ siege-2.53/src/Makefile.am	Sun May  5 13:13:42 2002
+@@ -22,13 +22,10 @@
+ 
+ bin_PROGRAMS       =   siege
+ 
+-INCLUDES           =   $(SSL_INCLUDE)
++INCLUDES           =   $(SSL_INCLUDE) $(PTHREAD_CFLAGS)
+ 
+-CFLAGS             =   $(PTHREAD_CFLAGS)
+ 
+-LDFLAGS            =   $(SSL_LDFLAGS) $(PTHREAD_LDFLAGS)  
+-
+-LIBS               =   $(SSL_LIBS) 
++LIBS               =   $(SSL_LIBS) $(SSL_LDFLAGS) $(PTHREAD_LDFLAGS)  
+ 
+ siege_LDADD        =   $(top_srcdir)/lib/joedog/libjoedog.la
+ 
