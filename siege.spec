@@ -7,7 +7,10 @@ License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://ftp.armstrong.com/pub/siege/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-am_fixes.patch
 URL:		http://www.joedog.org/siege/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,8 +27,13 @@ basis.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+rm -f missing
+aclocal
+autoconf
+automake -a -c -f
 %configure --with-ssl
 %{__make}
 
@@ -39,14 +47,6 @@ gzip -9nf README README.https AUTHORS KNOWNBUGS NEWS ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%pre
-
-%preun
-
-%post
-
-%postun
 
 %files
 %defattr(644,root,root,755)
