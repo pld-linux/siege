@@ -43,8 +43,8 @@ u¿ytkownika.
 %build
 rm -f missing
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure --with-ssl
 %{__make}
 
