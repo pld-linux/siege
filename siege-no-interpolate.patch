@@ -1,0 +1,8 @@
+--- siege-2.61/utils/siege.config.in~	2004-09-11 20:13:13.000000000 +0300
++++ siege-2.61/utils/siege.config.in	2005-01-11 23:44:12.000000000 +0200
+@@ -20,4 +20,4 @@
+   echo ""
+   exit
+ fi
+-cat > $rcfile <<_EOF_  
++cat > $rcfile <<'_EOF_'
