@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://ftp.armstrong.com/pub/siege/%{name}-%{version}.tar.gz
+# Source0-md5:	91610bcaaf0a90cced472dc7ed8caae4
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_fixes.patch
 URL:		http://www.joedog.org/siege/
