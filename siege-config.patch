@@ -1,0 +1,11 @@
+--- siege-2.61/doc/siegerc.in~	2004-11-19 17:06:18.000000000 +0200
++++ siege-2.61/doc/siegerc.in	2005-04-22 14:42:18.000000000 +0300
+@@ -113,7 +113,7 @@
+ #     file = $HOME/etc/urls.txt
+ #     file = $URLSFILE
+ #
+-# file =
++file = /etc/urls.txt
+ 
+ #
+ # Default URL, this is a single URL that you want to test. This
