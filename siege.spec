@@ -10,6 +10,7 @@ Source0:	ftp://sid.joedog.org/pub/siege/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_fixes.patch
 Patch2:		%{name}-no-interpolate.patch
+Patch3:		%{name}-config.patch
 URL:		http://www.joedog.org/siege/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -42,6 +43,7 @@ u¿ytkownika.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 rm -f missing
