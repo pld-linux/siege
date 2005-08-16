@@ -1,11 +1,19 @@
 --- siege-2.61/doc/siegerc.in~	2004-11-19 17:06:18.000000000 +0200
 +++ siege-2.61/doc/siegerc.in	2005-04-22 14:42:18.000000000 +0300
+@@ -14,6 +14,7 @@
+ # You can also reference ENVIRONMENT variables without
+ # actually declaring them, example:
+ # logfile = $(HOME)/var/siege.log
++logfile = siege.log
+ 
+ #
+ # Signify verbose mode, true turns on verbose output
 @@ -113,7 +113,7 @@
  #     file = $HOME/etc/urls.txt
  #     file = $URLSFILE
  #
 -# file =
-+file = /etc/urls.txt
++file = urls.txt
  
  #
  # Default URL, this is a single URL that you want to test. This
