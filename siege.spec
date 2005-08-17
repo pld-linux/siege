@@ -2,7 +2,7 @@ Summary:	An HTTP regression testing/benchmarking utility
 Summary(pl):	Narzêdzie do testowania serwerów HTTP
 Name:		siege
 Version:	2.63
-Release:	1
+Release:	1.4
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://sid.joedog.org/pub/siege/%{name}-%{version}.tar.gz
@@ -50,7 +50,9 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure --with-ssl
+%configure \
+	--localstatedir=%{_localstatedir}/log \
+	--with-ssl
 %{__make}
 
 %install
@@ -58,7 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sysconfdir}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
