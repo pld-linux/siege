@@ -1,5 +1,5 @@
 Summary:	An HTTP regression testing/benchmarking utility
-Summary(pl.UTF-8):   Narzędzie do testowania serwerów HTTP
+Summary(pl.UTF-8):	Narzędzie do testowania serwerów HTTP
 Name:		siege
 Version:	2.64
 Release:	2
