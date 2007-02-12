@@ -1,5 +1,5 @@
 Summary:	An HTTP regression testing/benchmarking utility
-Summary(pl):	Narzêdzie do testowania serwerów HTTP
+Summary(pl.UTF-8):   NarzÄ™dzie do testowania serwerÃ³w HTTP
 Name:		siege
 Version:	2.64
 Release:	2
@@ -27,16 +27,16 @@ protocols, GET and POST directives, cookies, transaction logging, and
 basic authentication. Its features are configurable on a per user
 basis.
 
-%description -l pl
-Siege to narzêdzie do testowania dzia³ania i wydajno¶ci serwerów HTTP.
-Mo¿e testowaæ odporno¶æ dla pojedynczego URL-a ze zdefiniowan± liczb±
-symulowanych u¿ytkowników, lub ¶ci±gaæ wiele URL-i do pamiêci,
-obci±¿aj±c je równocze¶nie. Program raportuje ca³kowit± liczbê
-¶ci±gniêtych dokumentów, liczbê przes³anych bajtów, czas reakcji,
-liczbê jednoczesnych po³±czeñ i status operacji. Siege obs³uguje
-protoko³y HTTP/1.0 i 1.1, metody GET i POST, cookie, logowanie
-transakcji oraz zwyk³± autentykacjê. Opcje s± konfigurowalne dla
-u¿ytkownika.
+%description -l pl.UTF-8
+Siege to narzÄ™dzie do testowania dziaÅ‚ania i wydajnoÅ›ci serwerÃ³w HTTP.
+MoÅ¼e testowaÄ‡ odpornoÅ›Ä‡ dla pojedynczego URL-a ze zdefiniowanÄ… liczbÄ…
+symulowanych uÅ¼ytkownikÃ³w, lub Å›ciÄ…gaÄ‡ wiele URL-i do pamiÄ™ci,
+obciÄ…Å¼ajÄ…c je rÃ³wnoczeÅ›nie. Program raportuje caÅ‚kowitÄ… liczbÄ™
+Å›ciÄ…gniÄ™tych dokumentÃ³w, liczbÄ™ przesÅ‚anych bajtÃ³w, czas reakcji,
+liczbÄ™ jednoczesnych poÅ‚Ä…czeÅ„ i status operacji. Siege obsÅ‚uguje
+protokoÅ‚y HTTP/1.0 i 1.1, metody GET i POST, cookie, logowanie
+transakcji oraz zwykÅ‚Ä… autentykacjÄ™. Opcje sÄ… konfigurowalne dla
+uÅ¼ytkownika.
 
 %prep
 %setup -q
