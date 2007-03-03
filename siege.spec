@@ -1,16 +1,15 @@
 Summary:	An HTTP regression testing/benchmarking utility
 Summary(pl.UTF-8):	Narzędzie do testowania serwerów HTTP
 Name:		siege
-Version:	2.64
-Release:	2
+Version:	2.65
+Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://sid.joedog.org/pub/siege/%{name}-%{version}.tar.gz
-# Source0-md5:	9ee08da6e242a96945732af231074793
+# Source0-md5:	90c6c1519cc65b081efcdf3a7207a93f
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_fixes.patch
-Patch2:		%{name}-no-interpolate.patch
-Patch3:		%{name}-config.patch
+Patch2:		%{name}-config.patch
 URL:		http://www.joedog.org/JoeDog/Siege
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -43,7 +42,6 @@ użytkownika.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 %build
 rm -f missing
@@ -71,3 +69,5 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
+%{_mandir}/man5/*
+%{_mandir}/man7/*
