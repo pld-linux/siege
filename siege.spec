@@ -2,7 +2,7 @@ Summary:	An HTTP regression testing/benchmarking utility
 Summary(pl.UTF-8):	Narzędzie do testowania serwerów HTTP
 Name:		siege
 Version:	2.69
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	ftp://sid.joedog.org/pub/siege/%{name}-%{version}.tar.gz
