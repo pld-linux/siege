@@ -1,0 +1,11 @@
+--- siege-2.72/src/init.c~	2012-02-10 15:52:02.000000000 +0200
++++ siege-2.72/src/init.c	2013-01-29 11:51:56.781782568 +0200
+@@ -48,7 +48,7 @@
+    * use default of ~/.siegerc */
+   if(strcmp(my.rc, "") == 0){
+     if((e = getenv("SIEGERC")) != NULL){
+-      snprintf(my.rc, sizeof(my.rc), e);
++      snprintf(my.rc, sizeof(my.rc), "%s", e); // TODO: maybe strncpy instead if it puts \0 at the end as well
+     } else {
+       snprintf(my.rc, sizeof(my.rc), "%s/.siegerc", getenv("HOME"));
+       if (stat(my.rc, &buf) < 0 && errno == ENOENT) {
