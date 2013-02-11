@@ -1,16 +1,15 @@
 Summary:	An HTTP regression testing/benchmarking utility
 Summary(pl.UTF-8):	Narzędzie do testowania serwerów HTTP
 Name:		siege
-Version:	2.72
+Version:	2.73
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.joedog.org/pub/siege/%{name}-%{version}.tar.gz
-# Source0-md5:	6bd0b1dca6b95717e23a6bade9a0a1f4
+# Source0-md5:	d695fe63496e3d0bd3074058132f9c96
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-am_fixes.patch
 Patch2:		%{name}-config.patch
-Patch3:		format-security.patch
 URL:		http://www.joedog.org/index/siege-home
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -43,7 +42,6 @@ użytkownika.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 %build
 rm -f missing
@@ -68,8 +66,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README README.https AUTHORS KNOWNBUGS NEWS ChangeLog
-%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
-%{_mandir}/man5/*
-%{_mandir}/man7/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/siegerc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/urls.txt
+%attr(755,root,root) %{_bindir}/bombardment
+%attr(755,root,root) %{_bindir}/siege
+%attr(755,root,root) %{_bindir}/siege.config
+%attr(755,root,root) %{_bindir}/siege2csv.pl
+%{_mandir}/man1/bombardment.1*
+%{_mandir}/man1/siege.1*
+%{_mandir}/man1/siege.config.1*
+%{_mandir}/man1/siege2csv.1*
+%{_mandir}/man5/urls_txt.5*
+%{_mandir}/man7/layingsiege.7*
