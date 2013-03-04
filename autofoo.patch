@@ -1,0 +1,21 @@
+fix:
+configure.in:9: error: 'AM_CONFIG_HEADER': this macro is obsolete.
+    You should use the 'AC_CONFIG_HEADERS' macro instead.
+/usr/share/aclocal-1.13/obsolete-err.m4:12: AM_CONFIG_HEADER is expanded from...
+configure.in:9: the top level
+autom4te: /usr/bin/m4 failed with exit status: 1
+
+upstream should also rename configure.in to configure.ac:
+
+aclocal: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+--- siege-2.75/configure.in~	2012-04-17 17:43:03.000000000 +0300
++++ siege-2.75/configure.in	2013-03-04 17:49:26.656390759 +0200
+@@ -6,7 +6,7 @@
+ dnl
+ AC_INIT
+ AC_CONFIG_SRCDIR([src/setup.h]) 
+-AM_CONFIG_HEADER(include/config.h)
++AC_CONFIG_HEADERS(include/config.h)
+ 
+ dnl
+ dnl Define the utils directory
