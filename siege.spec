@@ -7,7 +7,7 @@ License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.joedog.org/pub/siege/%{name}-%{version}.tar.gz
 # Source0-md5:	e165dcab18ae27026f09c2b23dcca322
-Patch2:		%{name}-config.patch
+Patch0:		%{name}-config.patch
 URL:		http://www.joedog.org/index/siege-home
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -37,7 +37,7 @@ użytkownika.
 
 %prep
 %setup -q
-%patch2 -p1
+%patch0 -p1
 
 %build
 rm -f missing
