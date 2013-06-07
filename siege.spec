@@ -1,12 +1,12 @@
 Summary:	An HTTP regression testing/benchmarking utility
 Summary(pl.UTF-8):	Narzędzie do testowania serwerów HTTP
 Name:		siege
-Version:	3.0.0
+Version:	3.0.1
 Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.joedog.org/pub/siege/%{name}-%{version}.tar.gz
-# Source0-md5:	e0ace61f7e01c6b545ac767fc499f817
+# Source0-md5:	3401d9c8a02f227b63a0d10e2718ab37
 Patch0:		%{name}-config.patch
 URL:		http://www.joedog.org/index/siege-home
 BuildRequires:	autoconf
